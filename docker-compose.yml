@@ -1,0 +1,15 @@
+services:
+  airflow:
+    image: apache/airflow:2.7.3
+    user: "0:0" 
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/gcp_keys.json
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./keys/application_default_credentials.json:/opt/airflow/gcp_keys.json
+    ports:
+      - "8080:8080"
+    command: airflow standalone
+
+    

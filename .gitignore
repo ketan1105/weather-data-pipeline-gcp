@@ -1,0 +1,20 @@
+# GCP credentials
+keys/
+
+# Airflow
+airflow/logs/
+airflow/dags/__pycache__/
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
